@@ -1,4 +1,5 @@
 import math
+import matplotlib.pyplot as plt
 
 def f(x):
     return x**3
@@ -21,3 +22,13 @@ for i in range(max_iterations):
         b =c
     else:
         a =c
+
+x_values = []
+y_values = []
+for i in range(-20,20):
+    x_values.append(i)
+    y_values.append(f(i))
+
+plt.plot(x_values,y_values)
+plt.grid(True)
+plt.show()
